@@ -32,6 +32,48 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testAnnotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+
+    // Persistencia
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Validación (Bean Validation / Jakarta Validation)
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // Seguridad
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Flyway: en Boot 4 el starter dedicado es OBLIGATORIO.
+    // flyway-core solo (como en Boot 3) ya no se autoconfigura.
+    implementation 'org.springframework.boot:spring-boot-starter-flyway'
+    implementation 'org.flywaydb:flyway-database-postgresql'
+
+    // Driver de base de datos
+    runtimeOnly 'org.postgresql:postgresql'
+
+    // JWT
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // DevTools (opcional, recarga en caliente durante desarrollo)
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // Testing: cada starter "productivo" tiene su starter de test equivalente en Boot 4.
+    // Todos incluyen spring-boot-starter-test de forma transitiva.
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-flyway-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-validation-test'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
