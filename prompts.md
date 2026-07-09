@@ -16,3 +16,8 @@ La IA brindo el SecurityConfiguration, eliminando la ruta a Swagger, el cual seg
 4. Dado que se presentan errores en la implementacion dentro de jwtauthfilter, dado que hace uso de los repositories. Brindame el user repository
 
 La IA brindo los repositories de user y role, con los cuales se trabaja para finalizar la configuracion de la seguridad con jwt
+
+
+5. Brindame la configuracion de Dockerfile asi como de docker-compose segun la configuracion establecida en el proyecto
+
+La IA brindo el codigo con la implementacion de la configuracion de los archivos Docker para poder ser levantados en contenedores (sin probar)
